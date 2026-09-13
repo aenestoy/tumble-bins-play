@@ -18,7 +18,8 @@
       #game { width: 100%; height: 100%; }
       canvas { display: block; }
       /* Wide screens (desktop portal iframes): show the game inside a portrait phone frame. */
-      @media (min-width: 700px) and (min-aspect-ratio: 5/6) {
+      /* Only when there is room for a decent phone (≥ 640px tall); smaller portal iframes (e.g. 800×450) get the game full-frame instead. */
+      @media (min-width: 700px) and (min-aspect-ratio: 5/6) and (min-height: 640px) {
         body { background: radial-gradient(ellipse at 50% 40%, #e9e1d2 0%, #d9cfbb 70%); }
         #game {
           width: calc((100vh - 32px) * 9 / 16);
@@ -29,7 +30,7 @@
         }
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-DZwMGzaj.js"></script>
+    <script type="module" crossorigin src="./assets/index-BeExwFRP.js"></script>
   </head>
   <body>
     <div id="game"></div>
